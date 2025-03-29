@@ -73,8 +73,6 @@ Available Commands:
 | SSH intrusion log | `logger 'unauthorized ssh login attempt'`          |
 | Fill disk space   | `dd if=/dev/zero of=/tmp/junkfile bs=1M count=500` |
 
-
-
 ## 🐻 Contributor
 
 - Yubo Sun
