@@ -1,0 +1,7 @@
+{
+    "services": ["nginx", "ssh", "mysql"],
+    "memory_limit_mb": 500,
+    "discord_webhook": "https://discord.com/api/webhooks/your_webhook_url",
+    "log_keywords": ["error", "failed", "unauthorized"]
+  }
+  

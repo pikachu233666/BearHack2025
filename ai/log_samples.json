@@ -1,0 +1,31 @@
+[
+    {
+      "log": "nginx: service failed to start",
+      "action": "restart_nginx"
+    },
+    {
+      "log": "memory usage of process exceeded threshold",
+      "action": "kill_memory_hog"
+    },
+    {
+      "log": "unauthorized ssh login attempt detected",
+      "action": "alert_admin"
+    },
+    {
+      "log": "nginx crashed due to config error",
+      "action": "restart_nginx"
+    },
+    {
+      "log": "high memory usage detected",
+      "action": "kill_memory_hog"
+    },
+    {
+      "log": "apache2 unexpectedly stopped",
+      "action": "restart_apache"
+    },
+    {
+      "log": "mysql daemon failed to respond",
+      "action": "restart_mysql"
+    }
+  ]
+  
