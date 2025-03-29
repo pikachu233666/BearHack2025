@@ -1,31 +1,22 @@
 [
-    {
-      "log": "nginx: service failed to start",
-      "action": "restart_nginx"
-    },
-    {
-      "log": "memory usage of process exceeded threshold",
-      "action": "kill_memory_hog"
-    },
-    {
-      "log": "unauthorized ssh login attempt detected",
-      "action": "alert_admin"
-    },
-    {
-      "log": "nginx crashed due to config error",
-      "action": "restart_nginx"
-    },
-    {
-      "log": "high memory usage detected",
-      "action": "kill_memory_hog"
-    },
-    {
-      "log": "apache2 unexpectedly stopped",
-      "action": "restart_apache"
-    },
-    {
-      "log": "mysql daemon failed to respond",
-      "action": "restart_mysql"
-    }
-  ]
-  
+  { "log": "nginx: service failed to start", "action": "restart_nginx" },
+  { "log": "nginx crashed due to config error", "action": "restart_nginx" },
+  { "log": "nginx: worker process exited", "action": "restart_nginx" },
+  { "log": "mysql: can't connect to server", "action": "restart_mysql" },
+  { "log": "mysql: service stopped unexpectedly", "action": "restart_mysql" },
+  { "log": "memory usage of process exceeded threshold", "action": "kill_memory_hog" },
+  { "log": "oom-killer triggered", "action": "kill_memory_hog" },
+  { "log": "unauthorized ssh login attempt detected", "action": "alert_admin" },
+  { "log": "invalid user login from ip", "action": "alert_admin" },
+  { "log": "segfault in binary", "action": "alert_admin" },
+  { "log": "high cpu usage detected", "action": "kill_high_cpu" },
+  { "log": "apache2: worker segfault", "action": "restart_apache" },
+  { "log": "docker: container exited with error", "action": "restart_docker" },
+  { "log": "sshd: connection closed by invalid user", "action": "alert_admin" },
+  { "log": "service xyz failed", "action": "restart_generic" },
+  { "log": "disk space critically low", "action": "cleanup_disk" },
+  { "log": "journalctl: log buffer overrun", "action": "restart_journal" },
+  { "log": "network interface down", "action": "restart_network" },
+  { "log": "firewalld: failed to load rules", "action": "restart_firewalld" },
+  { "log": "cron job failed to execute", "action": "alert_admin" }
+]

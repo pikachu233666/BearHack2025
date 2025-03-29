@@ -19,7 +19,6 @@ def handle_log(log_line):
 
     elif action == "kill_memory_hog":
         send_alert(f"[AI 🤖] ({confidence}) Killing memory hog – score: {score:.2f}")
-        # Trigger your memory scan (or handle in monitor)
 
     elif action == "alert_admin":
         send_alert(f"[AI 🤖] ALERT: {log_line} (score: {score:.2f})")

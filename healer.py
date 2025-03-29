@@ -5,6 +5,9 @@ import requests
 import time
 import os
 from threading import Thread
+from ai.ai_matcher import match_log
+from healer import *
+from alerts import send_alert
 
 CONFIG = json.load(open("config.json"))
 LOG_FILE = "logs/healix.log"
@@ -38,14 +41,22 @@ def restore_config(service):
         restart_service(service)
         log(f"[✔] Restored config for {service}")
 
+
 def rule_engine(log_line):
-    if "nginx" in log_line and "failed" in log_line:
-        send_alert("[AI] Nginx failed, auto-restarting...")
-        restart_service("nginx")
-    elif "unauthorized" in log_line and "ssh" in log_line:
-        send_alert("[AI] Unauthorized SSH access attempt detected.")
+    action, score = match_log(log_line.lower())
+
+    if action != "unknown" and hasattr(globals()["__builtins__"], action) is False:
+        try:
+            func = globals().get(action)
+            if callable(func):
+                send_alert(f"[AI] Action: `{action}` (confidence: {score:.2f})")
+                func()
+            else:
+                send_alert(f"[AI] No handler for action: {action}")
+        except Exception as e:
+            send_alert(f"[ERROR] Exception during healing: {str(e)}")
     else:
-        log("[~] No rule match.")
+        send_alert(f"[AI] No confident match for: {log_line.strip()} ({score:.2f})")
 
 def check_services():
     for svc in CONFIG["services"]:
@@ -76,6 +87,44 @@ def start_monitoring():
         check_services()
         check_memory()
         time.sleep(10)
+
+def restart_mysql():
+    restart_service("mysql")
+
+def restart_apache():
+    restart_service("apache2")
+
+def restart_docker():
+    restart_service("docker")
+
+def restart_journal():
+    restart_service("systemd-journald")
+
+def restart_network():
+    restart_service("NetworkManager")
+
+def restart_firewalld():
+    restart_service("firewalld")
+
+def restart_generic():
+    print("[~] Generic restart: No specific service. Skipping actual restart.")
+
+def cleanup_disk():
+    subprocess.run(["rm", "-rf", "/tmp/*"])
+    print("[✔] Cleaned up temporary files to recover disk space")
+
+def kill_high_cpu():
+    import psutil
+    max_cpu = 0
+    target = None
+    for proc in psutil.process_iter(['pid', 'name', 'cpu_percent']):
+        if proc.info['cpu_percent'] > max_cpu:
+            max_cpu = proc.info['cpu_percent']
+            target = proc
+    if target:
+        psutil.Process(target.info['pid']).kill()
+        print(f"[✔] Killed high CPU process: {target.info['name']} ({max_cpu:.2f}%)")
+
 
 if __name__ == "__main__":
     log("🔧 Healix is starting...")
