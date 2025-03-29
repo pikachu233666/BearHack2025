@@ -2,8 +2,6 @@
 
 Healix is an AI-assisted automation framework that keeps your Linux system healthy by monitoring logs, services, resources, and auto-healing issues in real-time. Designed for hackathons, devops, cybersecurity, and system automation.
 
-[toc]
-
 ## ✨ Features
 
 - 🔍 Real-time monitoring of logs and services
