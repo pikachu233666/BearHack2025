@@ -2,6 +2,8 @@
 
 Healix is an AI-assisted automation framework that keeps your Linux system healthy by monitoring logs, services, resources, and auto-healing issues in real-time. Designed for hackathons, devops, cybersecurity, and system automation.
 
+[toc]
+
 ## ✨ Features
 
 - 🔍 Real-time monitoring of logs and services
@@ -25,17 +27,12 @@ cd healix
 ### Create virtual environment (optional but recommended)
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+source ./venv/bin/activate
 ```
 ### Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
-If you don’t have a requirements.txt, use:
-```bash
-pip install psutil watchdog requests streamlit streamlit-autorefresh scikit-learn
-```
-
 ## 🛠️ 2. Configuration
 
 Edit config.json to customize monitored services, memory limits, and webhook:
