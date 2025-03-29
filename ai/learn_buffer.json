@@ -106,5 +106,85 @@
   {
     "log": "Mar 29 09:53:19 Gabriel-Kali wpa_supplicant[1085]: FT: Failed to set PTK to the driver",
     "score": 0.495
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_IOCTL_VIRTGPU_GET_CAPS failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_IOCTL_VIRTGPU_CONTEXT_INIT failed with Permission denied, continuing without context...",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_VIRTGPU_RESOURCE_CREATE_BLOB failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: Failed to create virtgpu AddressSpaceStream",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: vulkan: Failed to get host connection",
+    "score": 0.309
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_VIRTGPU_RESOURCE_CREATE_BLOB failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: Failed to create virtgpu AddressSpaceStream",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: vulkan: Failed to get host connection",
+    "score": 0.309
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_VIRTGPU_RESOURCE_CREATE_BLOB failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: Failed to create virtgpu AddressSpaceStream",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: vulkan: Failed to get host connection",
+    "score": 0.309
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_VIRTGPU_RESOURCE_CREATE_BLOB failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: Failed to create virtgpu AddressSpaceStream",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: vulkan: Failed to get host connection",
+    "score": 0.309
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_VIRTGPU_RESOURCE_CREATE_BLOB failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: Failed to create virtgpu AddressSpaceStream",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: vulkan: Failed to get host connection",
+    "score": 0.309
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: DRM_VIRTGPU_RESOURCE_CREATE_BLOB failed with Permission denied",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: Failed to create virtgpu AddressSpaceStream",
+    "score": 0.367
+  },
+  {
+    "log": "Mar 29 10:06:55 Gabriel-Kali code.desktop[18409]: MESA: error: vulkan: Failed to get host connection",
+    "score": 0.309
   }
 ]

@@ -1,0 +1,6 @@
+psutil
+watchdog
+requests
+streamlit
+streamlit-autorefresh
+scikit-learn
