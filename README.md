@@ -77,7 +77,7 @@ Available Commands:
 
 
 
-## 🐻 Contribution
+## 🐻 Contributor
 
 - Yubo Sun
 - Dev Godhani
