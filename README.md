@@ -10,7 +10,7 @@ Healix is an AI-assisted automation framework that keeps your Linux system healt
 - 🔐 Detects unauthorized SSH attempts
 - 🧹 Cleans disk when full
 - 📡 Discord alerts
-- 🤖 AI-based log understanding using TF-IDF (no LLMs)
+- 🤖 AI-based log understanding using TF-IDF
 - 🧪 CLI-powered for easy testing and extensions
 - 📊 Streamlit dashboard (optional)
 
@@ -45,8 +45,10 @@ Edit config.json to customize monitored services, memory limits, and webhook:
 ## 🚀 3. Run Healix
 Usage (via CLI)
 ```bash
-python healix.py <command>
+sudo python healix.py <command>
 ```
+Please use sudo or root user to run it.
+
 Available Commands:
 
 | Command     | Description                                          |
@@ -78,3 +80,9 @@ Available Commands:
 - Yubo Sun
 - Dev Godhani
 - Ruslan Parkhomenko
+
+## FAQ
+
+Q: I have problem with sklearn module, how can I do with it?
+
+A: Try `pip uninstall scikit-learn` and then `pip install scikit-learn`
